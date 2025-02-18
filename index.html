@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVs e Câmeras Ao Vivo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .menu-container {
+            background: #333;
+            padding: 5px 0;
+            position: relative;
+        }
+        .logo {
+            text-align: center;
+            padding: 10px;
+            background: #444;
+        }
+        .logo img {
+            max-width: 200px;
+            width: 200px;
+            height: 80px;
+            object-fit: cover;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+            border-bottom: 3px solid red;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .nav-item:hover {
+            border-color: white;
+            color: #ccc;
+        }
+        .search-box {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #666;
+            background: #444;
+            color: white;
+        }
+        .main-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .channel-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .channel-info img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .video-player {
+            margin-bottom: 20px;
+        }
+        .suggested-channels {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+			
+        }
+        .suggested-channels .channel {
+            text-align: center;
+			margin: 12px;
+        }
+        .suggested-channels img {
+            width: 150px;
+            height: 150px;
+			object-fit: cover;
+            border-radius: 10px;
+			margin-bottom: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+        }
+        @media (max-width: 768px) {
+            .suggested-channels {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 576px) {
+            .suggested-channels {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="logo">
+            <img src="imagens-canais-incio/tvaonline.png" alt="Logo">
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">Canais</a>
+                <a href="#" class="nav-item">Rádios</a>
+                <a href="#" class="nav-item">Câmeras</a>
+                <a href="#" class="nav-item">TV Ao Vivo</a>
+            </div>
+            <div class="nav-right">
+                <input type="text" class="search-box" placeholder="Buscar canais...">
+                <a href="#" class="nav-item">Entrar</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="channel-info">
+            <img src="imagens-canais-incio/retrocartoon.png" alt="Canal 1">
+            <div>
+                <h2><strong>RETRÔ CARTOON - AO VIVO</strong></h2>
+            </div>
+        </div>
+        <div class="video-player">
+            <video id="player" playsinline controls>
+                <source src="https://video05.logicahost.com.br/guiatvpombal/guiatvpombal/playlist.m3u8
+" type="application/x-mpegURL" />
+            </video>
+        </div>
+        <div class="suggested-channels">
+            <div class="channel">
+                <a href="#"><img src="imagens-canais-incio/canalfilmesonline.png" alt="Sugerido 1"></a>
+<p><strong>FILMES ONLINE TV</strong></p>
+            </div>
+            <div class="channel">
+                <a href="#"><img src="imagens-canais-incio/Record_News.png" alt="Sugerido 2"></a>
+<p><strong>RECORD NEWS</strong></p>
+            </div>
+            <div class="channel">
+                <a href="#"><img src="imagens-canais-incio/tvescola.png" alt="Sugerido 3"></a>
+<p><strong>1980 CHANNEL&nbsp;</strong></p>
+            </div>
+            <div class="channel">
+                <a href="#"><img src="imagens-canais-incio/manchete.jpg" alt="Sugerido 4"></a>
+<p><strong>MANCHETE</strong></p>
+            </div>
+            <div class="channel">
+                <a href="#"><img src="imagens-canais-incio/jetsons.png" alt="Sugerido 5"></a>
+<p><strong>OS JETSONS</strong></p>
+            </div>
+            <div class="channel">
+                <a href="#"><img src="imagens-canais-incio/Jovem_Pan_News.png" alt="Sugerido 6"></a>
+<p><strong>JOVEM PAN NEWS</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Estatísticas</h3>
+                <p>Total de Canais: <span id="total-canais">0</span></p>
+                <p>Total de Câmeras: <span id="total-cameras">0</span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('player');
+            const source = video.querySelector('source').src;
+            
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(source);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = source;
+                video.addEventListener('loadedmetadata', () => {
+                    video.play();
+                });
+            }
+
+            const player = new Plyr(video, {
+                captions: { active: true }
+            });
+        });
+    </script>
+</body>
+</html>
