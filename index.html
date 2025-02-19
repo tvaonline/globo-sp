@@ -14,7 +14,7 @@
             background-color: #f0f0f0;
         }
         .menu-container {
-            background: #333;
+            background: #9BD239;
             padding: 5px 0;
             position: relative;
         }
@@ -36,6 +36,7 @@
             padding: 0 20px;
             max-width: 1200px;
             margin: 0 auto;
+			height: 80px;
         }
         .nav-left, .nav-right {
             display: flex;
@@ -46,7 +47,6 @@
             color: white;
             text-decoration: none;
             padding: 15px 0;
-            border-bottom: 3px solid red;
             transition: all 0.3s;
             display: flex;
             align-items: center;
@@ -150,6 +150,21 @@
             .suggested-channels {
                 grid-template-columns: 1fr;
             }
+			
+			.total-de-canais, .total-de-cameras {
+    width: 50px;
+    height: 50px;
+    background-color: #9BD239;
+    border-radius: 25px; /* Para deixar os cantos arredondados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease-in-out;
+    margin: 10px; /* Para dar um espaçamento entre as divs */
+}
+
+.total-de-canais:hover, .total-de-cameras:hover {
+    box-shadow: 0 0 10px #9BD239;
         }
     </style>
 </head>
@@ -160,11 +175,11 @@
         </div>
         <nav>
             <div class="nav-left">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">Canais</a>
-                <a href="#" class="nav-item">Rádios</a>
-                <a href="#" class="nav-item">Câmeras</a>
-                <a href="#" class="nav-item">TV Ao Vivo</a>
+                <a href="#" class="nav-item"><strong>Home</strong></a>
+                <a href="#" class="nav-item"><strong>Canais</strong></a>
+                <a href="#" class="nav-item"><strong>Rádios</strong></a>
+                <a href="#" class="nav-item"><strong>Câmeras</strong></a>
+                <a href="#" class="nav-item"><strong>TV Ao Vivo</strong></a>
             </div>
             <div class="nav-right">
                 <input type="text" class="search-box" placeholder="Buscar canais...">
@@ -226,10 +241,18 @@
                 </div>
             </div>
             <div>
-                <h3>Estatísticas</h3>
-                <p>Total de Canais: <span id="total-canais">0</span></p>
-                <p>Total de Câmeras: <span id="total-cameras">0</span></p>
-            </div>
+				
+				    <div class="total-de-canais">
+    </div>
+   <div class="total-de-canais">
+	   <h3>Estatísticas</h3>
+	   <p>Total de Canais: <span id="total-canais">15</span></p>
+    </div>
+    <div class="total-de-cameras">
+        <p>Total de Câmeras: <span id="total-cameras">8</span></div>  
+    
+    		
+		  </div>	 
         </div>
     </footer>
     <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
